@@ -1,0 +1,30 @@
+import { Component } from '@angular/core';
+import {Router, RouterLink, RouterLinkActive} from '@angular/router';
+
+@Component({
+  selector: 'cart-field',
+  standalone: true,
+  imports: [
+    RouterLinkActive,
+    RouterLink
+  ],
+  templateUrl: './cart-field.component.html',
+  styleUrl: './cart-field.component.css'
+})
+export class CartFieldComponent {
+
+  constructor(private router: Router) {}
+
+  openCart() {
+    console.log('button clicked');
+    this.router.navigate(['/cart']).then(navigated => {
+      if (navigated) {
+        console.log('Navigation to cart succeeded');
+      } else {
+        console.log('Navigation to cart failed or was canceled');
+      }
+    }).catch(error => {
+      console.error('Navigation error:', error);
+    });
+  }
+}
