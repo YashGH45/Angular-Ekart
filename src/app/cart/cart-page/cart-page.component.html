@@ -1,3 +1,15 @@
+@if(cartItems){
+  <div class="ekart--product--container">
 
+    <ng-container *ngFor="let item of cartItems" (click)="items = item">
+
+      <app-product [product]="item"
+                   (click)="items = item">
+
+      </app-product>
+
+    </ng-container>
+  </div>
+} @else {
   <div class="cart-page">Nothing in the Cart!!</div>
-
+}

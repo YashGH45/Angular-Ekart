@@ -1,8 +1,9 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Product} from "../../Models/Product";
 import {ProductListComponent} from "../product-list/product-list.component";
 import {NgForOf, NgIf} from "@angular/common";
 import {SetBackground} from "../../CustomDirectives/SetBackground.directive";
+import {CartService} from "../../service-files/cart.service";
 
 @Component({
   selector: 'product-detail',
@@ -15,9 +16,13 @@ import {SetBackground} from "../../CustomDirectives/SetBackground.directive";
   templateUrl: './product-detail.component.html',
   styleUrl: './product-detail.component.css'
 })
-export class ProductDetailComponent {
+export class ProductDetailComponent implements OnInit{
 
-  @Input() productListComp: ProductListComponent = undefined
+  @Input() productListComp: ProductListComponent = undefined;
+  @Output() closeDetail = new EventEmitter<void>();
+
+  constructor(private cartService: CartService) {
+  }
 
   product: Product;
 
@@ -26,7 +31,10 @@ export class ProductDetailComponent {
   }
 
   closeDetails(){
-    console.log('closed!!');
+    this.closeDetail.emit();
   }
 
+  addToCart(product: any){
+    this.cartService.addToCart(product);
+  }
 }

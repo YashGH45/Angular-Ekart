@@ -16,12 +16,11 @@ export class CartFieldComponent {
   constructor(private router: Router) {}
 
   openCart() {
-    console.log('button clicked');
     this.router.navigate(['/cart']).then(navigated => {
       if (navigated) {
         console.log('Navigation to cart succeeded');
       } else {
-        console.log('Navigation to cart failed or was canceled');
+        console.log('Navigation to cart failed');
       }
     }).catch(error => {
       console.error('Navigation error:', error);

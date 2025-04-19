@@ -4,5 +4,5 @@ import {ContainerComponent} from "./container/container.component";
 
 export const routes: Routes = [
   { path: '', component: ContainerComponent},
-  // { path: 'cart', component: CartPageComponent },
+  { path: 'cart', component: CartPageComponent }
 ];

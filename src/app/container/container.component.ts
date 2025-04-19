@@ -2,7 +2,6 @@ import {Component, ViewChild} from '@angular/core'
 import {NgOptimizedImage} from "@angular/common";
 import {SearchComponent} from "./search/search.component";
 import { CommonModule } from '@angular/common';
-import {of} from "rxjs";
 import {ProductListComponent} from "./product-list/product-list.component";
 import {ProductDetailComponent} from "./product-detail/product-detail.component";
 import {FeaturedBrandsComponent} from "./featured-brands/featured-brands.component";

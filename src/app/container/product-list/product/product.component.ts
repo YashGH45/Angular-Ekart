@@ -1,6 +1,6 @@
 import { Component,Input } from '@angular/core';
 import {NgIf, NgStyle} from "@angular/common";
-import {Product} from './../../../Models/Product'
+import {Product} from '../../../Models/Product'
 
 @Component({
   selector: 'app-product',

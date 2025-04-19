@@ -3,7 +3,7 @@ import {NgForOf, NgIf, NgStyle} from "@angular/common";
 import {ProductComponent} from "./product/product.component";
 import {FilterComponent} from "./filter/filter.component";
 
-import { Product } from './../../Models/Product'
+import { Product } from '../../Models/Product'
 
 @Component({
   selector: 'product-list',
@@ -21,10 +21,6 @@ import { Product } from './../../Models/Product'
 export class ProductListComponent {
 
   selectedProduct: Product;
-
-  // to disable the detail component
-  // @Output() productSelected = new EventEmitter<any>();
-
 
   products = [
     {
@@ -129,7 +125,7 @@ export class ProductListComponent {
       gender: "WOMEN",
       category: "RUNNING",
       size: [6, 7, 8, 9, 10],
-      color: ["White", , "Brown", "Red"],
+      color: ["White", "Brown", "Red"],
       price: 180,
       discountPrice:140,
       is_in_inventory: false,

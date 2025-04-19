@@ -8,7 +8,7 @@
     <product-list [searchText]="searchText" #productListComponent></product-list>
 
 
-    <product-detail *ngIf="productListComponent.selectedProduct" [productListComp]="productListComponent"></product-detail>
+    <product-detail *ngIf="productListComponent.selectedProduct" [productListComp]="productListComponent" (closeDetail)="productListComponent.selectedProduct = undefined"></product-detail>
 
     <div class="ekart-featured-products">
       <div class="ekart-featured-products-heading">
