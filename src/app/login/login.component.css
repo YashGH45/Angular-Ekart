@@ -1,8 +1,55 @@
-.login-wrapper {
-  width: 300px;
-  margin: 100px auto;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  border-radius: 8px;
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto&display=swap');
+
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #e0f7fa, #f1f8e9);
+  font-family: 'Roboto', sans-serif;
+}
+
+.login-card {
+  width: 350px;
+  padding: 30px 25px;
+  background: white;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  border-radius: 12px;
   text-align: center;
+}
+
+.brand-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+  letter-spacing: 1px;
+}
+
+.login-heading {
+  font-size: 1.5rem;
+  margin: 10px 0 20px;
+  color: #4caf50;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-field {
+  width: 100%;
+}
+
+.login-btn {
+  font-weight: bold;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #4caf50;
+  color: white;
+}
+
+.login-btn:hover {
+  background-color: #43a047;
 }
