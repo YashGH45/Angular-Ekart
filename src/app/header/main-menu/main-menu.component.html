@@ -1,3 +1,3 @@
 <div class="ekart-menu">
-  <a *ngFor="let menu of mainMenuList" href="#" class="menuItem">{{ menu }}</a>
+  <a *ngFor="let menu of mainMenuList" class="menuItem" (click)="navigateTo(menu)">{{ menu }}</a>
 </div>

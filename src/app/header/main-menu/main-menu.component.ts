@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {NgForOf} from "@angular/common";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'main-menu',
@@ -12,6 +13,24 @@ import {NgForOf} from "@angular/common";
 })
 export class MainMenuComponent {
 
-  mainMenuList: string[] = ['Home', 'Products', 'About', 'Contacts', 'Services'];
+  constructor(private router: Router) {
+  }
 
+  mainMenuList: string[] = ['Home', 'Products', 'Contacts', 'Services', 'About'];
+
+  navigateTo(menuItem: string){
+    switch (menuItem) {
+      case 'About':
+        this.router.navigate(['/about']).then().catch(error => {
+          console.error('Navigation error:', error);
+        });
+        break;
+
+      case 'Home':
+        this.router.navigate(['/home']).then().catch(error => {
+          console.error('Navigation error:', error);
+        });
+        break;
+    }
+  }
 }
